@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/public.css">
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+<div id="public" style="width:200px;"></div>
+<script src="public.js"></script>
+<script>
+    new window['public']({
+        width: 200,
+        data: [
+            {id: 1, text: '后台首页', checked: false,href:'../main.php', children: [
+                {id: 11, text: '输入框', href:'#fff', data: {path: 'form/input'}, checked: false},
+                {id: 12, text: '下拉框', checked: false},
+                {id: 13, text: '选择框', checked: true, children: [
+                    {id: 131, text: '多选框', checked: true},
+                    {id: 132, text: '单选框', checked: true},
+                    {id: 133, text: '开关', checked: true}
+                ]},
+                {id: 14, text: '文本框', checked: false, children: [
+                    {id: 141, text: '文本1'},
+                    {id: 142, text: '文本2'},
+                    {id: 143, text: '文本3'}
+                ]}
+            ], expand: true},
+            {id: 3, text: '表格', checked: false, children: [
+                {id: 31, text: '可编辑表格', checked: false},
+                {id: 32, text: '分页表格', checked: false},
+                {id: 33, text: '单行文本表格', checked: false},
+                {id: 34, text: '换行文本表格', checked: false}
+            ]},
+            {id: 2, text: '功能模块', checked: false, children: [
+                {id: 21, text: '编辑器', checked: false},
+                {id: 22, text: '代码', checked: false},
+                {id: 23, text: '日历', checked: true, children: [
+                    {id: 231, text: '输入框日历', checked: true},
+                    {id: 232, text: '日程日历', checked: true},
+                    {id: 233, text: '个性化日历', checked: true}
+                ]},
+                {id: 14, text: '文本框', checked: false}
+            ]}
+        ],
+        onItemClick: function(e) {
+            console.log('点击节点');
+        }
+    }).$el.appendTo($('#public'));
+</script>
+</body>
+</html>

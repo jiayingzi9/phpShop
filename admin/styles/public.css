@@ -1,0 +1,19 @@
+.jf-public {overflow-x:hidden;}
+.jf-public a {color:inherit;}
+.jf-public li.jf-public-expand > ul {display:block;}
+.jf-public li {position:relative;}
+.jf-public > li:hover > a, .jf-public > li.jf-public-active > a {background: #009688;color:#fff;}
+.jf-public > li > ul > li:hover > a, .jf-public > li > ul > li.jf-public-active > a {color:#009688;font-weight:bold;}
+.jf-public > li > ul > li:hover > a:after, .jf-public > li > ul > li.jf-public-active > a:after {border-color: #009688;}
+.jf-public > li > ul > li > ul > li:hover > a, .jf-public > li > ul > li > ul > li.jf-public-active > a {color:#fff;font-weight:bold;}
+.jf-public li a {height:45px;line-height:45px;width:100%;display:inline-block;padding:0 20px;}
+.jf-public > li {background:#393D49;margin:1px 0;}
+.jf-public > li > a {border-left:5px solid #009688;color:#fff;font-weight:bold;}
+.jf-public > li > ul {display:none;}
+/*.jf-public > li > ul > li {background:#fff;}*/
+.jf-public > li > ul > li > a {color:#fff;position:relative;}
+.jf-public > li > ul > li > a:after {content:'';position:absolute;bottom:0;left:10px;right:50px;border-bottom:1px dashed #ccc;width: 95%;}
+.jf-public > li > ul > li > ul {display:none;}
+.jf-public > li > ul > li > ul > li > a {color:#707070;padding:0 40px;}
+.jf-public .jf-font-line {position:absolute;right:10px;top:0;width:45px;height:45px;line-height:45px;text-align:center;font-size:20px;cursor:pointer;color:#b8cae0;font-weight:bold;}
+.jf-public .jf-font-line-check {color:#009688;}
